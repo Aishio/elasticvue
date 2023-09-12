@@ -64,6 +64,11 @@ export default class ElasticsearchAdapter {
     const query = filter ? `${filter}*` : ''
     return this.request(`_cat/shards/${query}`, 'GET', params)
   }
+#hector test allocation
+  catShards (params: object, filter?: string) {
+    const query = filter ? `${filter}*` : ''
+    return this.request(`_cat/allocation/${query}`, 'GET', params)
+  }
 
   indexGetAlias ({ index }: { index: string }) {
     return this.request(`${index}/_alias`, 'GET')
