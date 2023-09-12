@@ -131,10 +131,10 @@
   import { useTranslation } from '../../composables/i18n.ts'
 
   const t = useTranslation()
-
+  #hector_test 
   type ClusterHealth = {
     cluster_name: string
-    status: string
+    status_mod: string
     timed_out: string
     number_of_nodes: number
     number_of_data_nodes: number
@@ -148,6 +148,7 @@
     number_of_in_flight_fetch: number
     task_max_waiting_in_queue_millis?: number
     active_shards_percent_as_number?: number
+    allocation?: number
   }
 
   const { requestState, data, load } = useElasticsearchRequest<ClusterHealth>('clusterHealth')
