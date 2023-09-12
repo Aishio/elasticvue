@@ -53,7 +53,20 @@ You can use elasticvue in several ways:
 ### Desktop App
 
 Please check the [releases page](https://github.com/cars10/elasticvue/releases) for the latest desktop app download.
-
+For ECE deployment -- menu My deployment -- Edit -- Elasticsearch (Manage user settings and extensions) 
+- Add the following lines:
+           # allow CORS requests from https://app.elasticvue.com
+           http.cors.enabled: true
+           http.cors.allow-origin: "https://app.elasticvue.com"
+           # and if your cluster uses authorization:
+           http.cors.allow-headers: X-Requested-With,Content-Type,Content-Length,Authorization
+- Save
+- Restart your cluster
+- On Desktop app write to add cluster:
+             - cluster name
+             - username / password (available on menu: My deployment - security)
+             - URI (available on menu: My deployment - Elasticsearch Copy endpoint)
+  
 ### Browser extensions
 
 * [Google chrome](https://chrome.google.com/webstore/detail/elasticvue/hkedbapjpblbodpgbajblpnlpenaebaa)
