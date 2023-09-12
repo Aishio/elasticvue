@@ -53,6 +53,9 @@ You can use elasticvue in several ways:
 ### Desktop App
 
 Please check the [releases page](https://github.com/cars10/elasticvue/releases) for the latest desktop app download.\
+
+### ECE cloud
+
 For ECE deployment -- menu My deployment -- Edit -- Elasticsearch (Manage user settings and extensions)\
 1. Add the following lines
  ```bash
